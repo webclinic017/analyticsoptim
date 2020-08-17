@@ -1,12 +1,4 @@
-from database.postgres_sql_connect import config, engine, SessionLocal, Base
-from iris.router import iris_classifier_router
-from database.db_models import Stocks
+import yfinance
 
-
-stock = Stocks()
-stock.symbol = "F"
-print("adfafopasifdpoipasifppaspfpsadfpopods")
-print(stock.symbol)
-sess = SessionLocal()
-sess.add(stock)
-sess.commit()
+msft = yfinance.Ticker('MSFT')
+print(msft.info)

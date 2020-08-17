@@ -2,12 +2,13 @@ import psycopg2
 from configparser import  ConfigParser
 # conn = psycopg2.connect("dbname=suppliers user=postgres password=postgres")
 import os
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
-def config(filename='iris/database.ini', section='postgresql'):
+
+def config(filename='../iris/database.ini', section='postgresql'):
+
     # create a parser
+    print(os.getcwd(),filename)
+    assert os.path.isfile(filename)
     parser = ConfigParser()
     # read config file
     parser.read(filename)
@@ -54,15 +55,8 @@ def connect():
             conn.close()
             print('Database connection closed.')
 
-params = config(filename="iris/database.ini")
-SQLALCHEMY_DATABASE_URL = f"postgresql://{params['user']}:{params['password']}@{params['host']}/{params['database']}"
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-Base = declarative_base()
-from database import  db_models
-Base.metadata.create_all(bind=engine)
 
-if __name__ == '__main__':
-    connect()
+
+

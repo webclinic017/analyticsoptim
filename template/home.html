@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Screener</title>
+</head>
+<body>
+<h1>Stock Screener</h1>
+
+<form>
+    <select name="pattern">
+        {% for pattern in patterns %}
+            <option value="{{pattern}}">{{patterns[pattern]}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="scan"/>
+</form>
+<div>
+    kh kh kh
+</div>
+</body>
+</html>
+
+{% endblock %}
