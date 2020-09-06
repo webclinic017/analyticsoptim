@@ -5,7 +5,7 @@ import yahoo_fin.stock_info as si
 package = Package('https://datahub.io/core/finance-vix/datapackage.json')
 spy = si.get_data("SPY")
 # print list of all resources:
-print(package.resource_names)
+print(__name__, package.resource_names)
 # print(package.resources vix-daily_csv)
 vix = pd.DataFrame(package.resources[1].read())
 vix = vix.set_index(0)

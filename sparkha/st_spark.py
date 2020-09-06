@@ -28,7 +28,6 @@ spark = SparkSession.builder.getOrCreate()
 #             inferschema='true'). \
 #     load("iris.csv", header=True)
 # df.show(5,True)
-# df.printSchema()
 
 # from pyspark import SparkContext
 # sc = SparkContext("local", "First App")
@@ -41,7 +40,7 @@ spark = SparkSession.builder.getOrCreate()
 import os
 sparkClassPath = os.getenv('SPARK_CLASSPATH', '/home/lohrasp/programs/spark/jars/postgresql-42.2.14.jar')
 jar_path = "/home/lohrasp/programs/spark/jars/postgresql-42.2.14.jar"
-print("jar exists:", os.path.isfile(jar_path))
+# print("jar exists:", os.path.isfile(jar_path))
 
 os.environ['PYSPARK_SUBMIT_ARGS'] = f'--jars {jar_path} pyspark-shell'
 conf = SparkConf()
