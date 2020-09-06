@@ -1,6 +1,17 @@
 {
   "books": [
     {
+      "isbn": "111111111111",
+      "title": "Lohrasp",
+      "subtitle": "Programming",
+      "author": "Matt Najarian",
+      "published": "2020",
+      "publisher": "No Starch Press",
+      "pages": 2,
+      "description": "JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+      "website": "http://lohrasp.com/"
+    },
+    {
       "isbn": "9781593275846",
       "title": "Eloquent JavaScript, Second Edition",
       "subtitle": "A Modern Introduction to Programming",
