@@ -1,9 +1,9 @@
-from iris.router import iris_classifier_router, dash_graph
+from frontend.router import iris_classifier_router, dash_graph
 
 import database.database_helper as dbh
 from .patterns import patterns
 from .dashfigs import *
-from iris.router import dashboard, dash_graph
+from frontend.router import dashboard, dash_graph
 
 from fastapi import Request, FastAPI
 from fastapi.templating import Jinja2Templates
@@ -12,7 +12,7 @@ from starlette.middleware.wsgi import WSGIMiddleware
 
 templates = Jinja2Templates(directory="template")
 app = FastAPI()
-app.include_router(iris_classifier_router.router, prefix='/iris')
+app.include_router(iris_classifier_router.router, prefix='/frontend')
 app.include_router(dashboard.router)
 app.mount("/dash", WSGIMiddleware(dash_graph.dashapp.server))
 

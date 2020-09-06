@@ -1,6 +1,6 @@
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
-from iris.database_sessions import SessionLocal
+from frontend.database_sessions import SessionLocal
 from fastapi import FastAPI, Request, Depends, BackgroundTasks
 from sqlalchemy.orm import Session
 from database.db_models import Stocks

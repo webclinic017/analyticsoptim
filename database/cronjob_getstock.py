@@ -7,7 +7,7 @@ from database.database_helper import get_time_and_symbols
 
 
 def add_new_data(symbols, start="2020-08-02", end="2020-08-19"):
-    # params = config(filename="../iris/database.ini")
+    # params = config(filename="../frontend/database.ini")
     # SQLALCHEMY_DATABASE_URL = f"postgresql://{params['user']}:{params['password']}@{params['host']}/{params['database']}"
     SQLALCHEMY_DATABASE_URL = "postgresql://postgres:reallyStrongPwd123@192.168.0.108/testdb1"
 
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 # print(curs.fetchall())
 
 # from database.postgres_sql_connect import config
-# params = config(filename="../iris/database.ini")
+# params = config(filename="../frontend/database.ini")
 # SQLALCHEMY_DATABASE_URL = f"postgresql://{params['user']}:{params['password']}@{params['host']}/{params['database']}"
 # SQLALCHEMY_DATABASE_URL = "postgresql://postgres:reallyStrongPwd123@192.168.0.108/testdb1"
 # engine = db.create_engine(SQLALCHEMY_DATABASE_URL)

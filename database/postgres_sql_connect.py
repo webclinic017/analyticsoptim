@@ -4,7 +4,7 @@ from configparser import  ConfigParser
 import os
 
 
-def config(filename='../iris/database.ini', section='postgresql'):
+def config(filename='../frontend/database.ini', section='postgresql'):
 
     # create a parser
     print(os.getcwd(),filename)

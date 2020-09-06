@@ -11,7 +11,7 @@ from database.db_models import StockData
 import pandas as pd
 import numpy as np
 
-from iris.database_sessions import SessionLocal
+from frontend.database_sessions import SessionLocal
 
 
 def get_pg_cursur():

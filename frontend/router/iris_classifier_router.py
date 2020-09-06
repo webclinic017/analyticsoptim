@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from iris.iris_classifier import IrisClassifier
+from frontend.iris_classifier import IrisClassifier
 from starlette.responses import JSONResponse
 
 router = APIRouter()

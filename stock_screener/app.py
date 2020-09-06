@@ -1,4 +1,4 @@
-from iris.router import iris_classifier_router
+from frontend.router import iris_classifier_router
 from database.db_models import Stocks
 from fastapi import FastAPI, Request, Depends, BackgroundTasks
 from enum import Enum
@@ -12,7 +12,7 @@ from .patterns import patterns
 
 templates = Jinja2Templates(directory="template")
 app = FastAPI()
-app.include_router(iris_classifier_router.router, prefix='/iris')
+app.include_router(iris_classifier_router.router, prefix='/frontend')
 
 class StocksRequest(BaseModel):
     symbol: str

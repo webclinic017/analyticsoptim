@@ -1,4 +1,4 @@
 import database
-import iris
+import frontend
 import mypytorch
 import sparkha

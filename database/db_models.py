@@ -2,7 +2,7 @@ import sqlalchemy as db
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import mapper
 
-# from iris.database_sessions import Base
+# from frontend.database_sessions import Base
 
 Base = declarative_base()
 metadata = db.MetaData()

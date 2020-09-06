@@ -26,7 +26,7 @@ spark = SparkSession.builder.getOrCreate()
 # df = spark.read.format('com.databricks.spark.csv'). \
 #     options(header='true',
 #             inferschema='true'). \
-#     load("iris.csv", header=True)
+#     load("frontend.csv", header=True)
 # df.show(5,True)
 
 # from pyspark import SparkContext
