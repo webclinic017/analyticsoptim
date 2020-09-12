@@ -49,10 +49,10 @@ conf.set('spark.jars', 'file:%s' % sparkClassPath)
 conf.set('spark.executor.extraClassPath', sparkClassPath)
 conf.set('spark.driver.extraClassPath', sparkClassPath)
 
-url = 'postgresql://192.168.0.108:5432/testdb1'
-properties = {'user':'postgres', 'password':'reallyStrongPwd123'}
-
-df = DataFrameReader(spark).jdbc(url='jdbc:%s' % url, table='tablename', properties=properties)
+# url = 'postgresql://192.168.0.108:5432/testdb1'
+# properties = {'user':'postgres', 'password':'reallyStrongPwd123'}
+#
+# df = DataFrameReader(spark).jdbc(url='jdbc:%s' % url, table='tablename', properties=properties)
 
 
 # from pyspark.sql import SparkSession

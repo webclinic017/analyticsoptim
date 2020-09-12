@@ -2,7 +2,7 @@ from pyspark import SparkContext, SparkConf
 from pyspark.sql import DataFrameReader, SQLContext
 import os
 
-sparkClassPath = os.getenv('SPARK_CLASSPATH', '/home/lohrasp/programs/spark/jars/postgresql-42.2.14.jar')
+sparkClassPath = os.getenv('SPARK_CLASSPATH', '/opt/spark/jars/postgresql-42.2.14.jar')
 
 # Populate configuration
 conf = SparkConf()
@@ -19,7 +19,7 @@ sqlContext = SQLContext(sc)
 url = 'postgresql://slave:5432/testdb1'
 properties = {'user':'postgres', 'password':'reallyStrongPwd123'}
 
-df = DataFrameReader(sqlContext).jdbc(url='jdbc:%s' % url, table='stocks', properties=properties)
+df = DataFrameReader(sqlContext).jdbc(url='jdbc:%s' % url, table='rental', properties=properties)#.schema('incertae')
 
 df.printSchema()
 df.show()
